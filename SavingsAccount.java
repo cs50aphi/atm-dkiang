@@ -18,4 +18,9 @@ public class SavingsAccount
     {
         balance -= amount;
     }
+    
+    public void deposit(int amount)
+    {
+        balance += amount;
+    }
 }
