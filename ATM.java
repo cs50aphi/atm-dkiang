@@ -6,7 +6,9 @@ public class ATM
     public static void main(String[] args)
     {
         Scanner in = new Scanner(System.in);
-        System.out.println("Greetings and how may I serve you?");"
+        CheckingAccount checking = new CheckingAccount();
+        SavingsAccount savings = new SavingsAccount();
+        System.out.println("Greetings and how may I serve you?");
         boolean done = false;
         do
         {
@@ -29,7 +31,7 @@ public class ATM
                         System.out.print("How many credits do you want to deposit?");
                         amount = in.nextInt();
                     }
-                    while (amount < 0 || r > 100000);
+                    while (amount < 0 || amount > 100000);
                     if (account == 1)
                     {
                         checking.deposit(amount);
